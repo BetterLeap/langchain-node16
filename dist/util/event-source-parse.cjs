@@ -15,7 +15,6 @@ exports.EventStreamContentType = "text/event-stream";
  * @returns {Promise<void>} A promise that will be resolved when the stream closes.
  */
 async function getBytes(stream, onChunk) {
-    console.log("we're getting to getbytes");
     stream.on("data", (chunk) => {
         onChunk(chunk);
     });

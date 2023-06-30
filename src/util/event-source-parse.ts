@@ -33,8 +33,6 @@ export async function getBytes(
   stream: Readable,
   onChunk: (arr: Buffer, flush?: boolean) => void
 ) {
-  console.log("we're getting to getbytes");
-
   stream.on("data", (chunk) => {
     onChunk(chunk);
   });
